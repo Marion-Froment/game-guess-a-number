@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+  </head>
+  <body class="overflow-hidden">
+    <header>
+      <div class="flex justify-center mt-4">
+        <h1 class="font-bold text-2xl lg:text-4xl xl:text-5xl mt-4">
+          GUESS THE NUMBER
+        </h1>
+      </div>
+    </header>
+
+    <main
+      class="overflow-hidden flex flex-col items-center justify-center h-screen"
+    >
+      <div>
+        <p class="font-bold my-8 ...">
+          I generated a number between 0 and 500, try to find it
+        </p>
+      </div>
+
+      <div>
+        <p class="text-right" id="attemptsDisplay">Attempts :</p>
+      </div>
+
+      <label for="number">Your guess</label>
+      <input
+        class="input"
+        type="text"
+        id="number"
+        name="number"
+        required
+        placeholder="Enter your guessing number"
+      />
+
+      <button id="submitButton">Submit</button>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
