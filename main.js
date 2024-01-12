@@ -46,7 +46,7 @@ function initializeGame() {
       }
     }
 
-    messageDisplay.innerHTML = `The number entered is too <span class="highlight">${
+    messageDisplay.innerText = `The number entered is too <span class="highlight">${
       userGuess < randomNumber ? "small" : "big"
     }</span> !`;
     numberInput.value = "";
@@ -58,8 +58,8 @@ function initializeGame() {
     resetColumns();
   }
   function resetColumns() {
-    tooSmallColumn.innerHTML = "";
-    tooLargeColumn.innerHTML = "";
+    tooSmallColumn.HTML = "";
+    tooLargeColumn.innerText = "";
   }
 
   function resetGameData() {
@@ -96,7 +96,7 @@ function initializeGame() {
   });
   function displayVictoryMessage() {
     const messageVictory = document.getElementById("messageVictory");
-    messageVictory.innerHTML = `You found the number in ${attemptsCounter} tr${
+    messageVictory.HTML = `You found the number in ${attemptsCounter} tr${
       attemptsCounter <= 1 ? "y" : "ies"
     }!`;
     popup.style.display = "block";
