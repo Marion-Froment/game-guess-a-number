@@ -158,7 +158,7 @@ html {
   /* use position: relative; so that BG is only for .btn */
   position: relative;
   isolation: isolate;
-  display: inline-grid;
+  display: flex;
   place-content: center;
   padding: 0.5em 1.5em;
   font-size: 17px;
@@ -418,4 +418,8 @@ h3 {
 
 #messageVictory {
   margin: 1em;
+}
+
+#gameElements {
+  display: none;
 }

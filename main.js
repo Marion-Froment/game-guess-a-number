@@ -1,13 +1,9 @@
 import "./styles.scss";
 
-const gameStartButton = document.getElementById("gameStart");
-
-if (gameStartButton) {
-  gameStartButton.addEventListener("click", function () {
-    window.location.href = "game.html";
-  });
-}
-
+document.getElementById("gameStart").addEventListener("click", function () {
+  document.getElementById("initialElements").style.display = "none";
+  document.getElementById("gameElements").style.display = "block";
+});
 document.addEventListener("DOMContentLoaded", function () {
   initializeGame();
 });
