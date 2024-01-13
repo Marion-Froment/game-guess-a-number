@@ -58,7 +58,7 @@ function initializeGame() {
     resetColumns();
   }
   function resetColumns() {
-    tooSmallColumn.HTML = "";
+    tooSmallColumn.innerText = "";
     tooLargeColumn.innerText = "";
   }
 
