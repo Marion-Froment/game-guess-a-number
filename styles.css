@@ -43,6 +43,68 @@ html {
     transition-duration: 0.001s !important;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* Your tablet styles here */
+  h1 {
+    font-size: 2.5em;
+  }
+  .explication {
+    font-size: 0.8em;
+  }
+  .btn {
+    font-size: 0.9em !important;
+    padding: 0.6em 1em !important;
+  }
+  .input-group__label {
+    padding: 0.1em 1em !important;
+    font-size: 0.5em !important;
+    top: 1.2em !important;
+  }
+  .input-group__input {
+    font-size: 1em !important;
+  }
+  #success-box {
+    width: 55% !important;
+    height: 50% !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* Your mobile styles here */
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .explication {
+    font-size: 0.8em;
+  }
+  .btn {
+    font-size: 0.8em !important;
+    padding: 0.5em 1em !important;
+  }
+  .attempt {
+    font-size: 0.9em;
+  }
+  .input-group__label {
+    padding: 0.1em 0.4em !important;
+    font-size: 0.5em !important;
+    top: 0.7em !important;
+  }
+  .input-group__input {
+    font-size: 1em !important;
+  }
+  .input-group__input::-moz-placeholder {
+    font-size: 0.4em !important;
+  }
+  .input-group__input::placeholder {
+    font-size: 0.4em !important;
+  }
+  #success-box {
+    width: 90% !important;
+    height: 40% !important;
+  }
+}
 .explication {
   margin: 1em;
 }
@@ -99,7 +161,7 @@ html {
   .input-group__label {
     position: absolute;
     left: 3em;
-    top: -0.28em;
+    top: 0.4em;
     background: #000000;
   }
 }
@@ -262,7 +324,7 @@ html {
 
 .column p {
   font-weight: bold;
-  margin-bottom: 0.313em;
+  margin-bottom: 0.8em;
   text-decoration: underline;
 }
 
