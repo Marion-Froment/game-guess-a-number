@@ -1,9 +1,24 @@
+$white: #fcfcfc;
+$gray: #cbcdd3;
+$dark: #777777;
+$success: #a1a0e6;
+$secondary: #7a52a5;
+$deepPurple: #7e03aa;
+$bluePastel: #afffff;
+$cyanSky: #00fffb;
+$midnightBlue: #000066;
+$amber: #ffae00;
+$darkPurple: #440022;
+$deepPlum: #220022;
+$blackWithOpacity: #00000099;
+$black: #000000;
+
 * {
   box-sizing: border-box;
 }
 body {
   font-family: Arial, sans-serif;
-  color: #fff;
+  color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,17 +26,34 @@ body {
 }
 
 h1 {
-  color: black;
   font-size: 4em;
   font-weight: 800;
-  text-transform: uppercase;
   text-align: center;
-  color: #fff;
+  color: $white;
 }
 
 h2 {
   margin: 2em;
   text-align: center;
+}
+h3 {
+  font-size: 0.9em;
+  font-weight: 100;
+  letter-spacing: 0.188em;
+  padding-top: 0.313em;
+  color: $white;
+  padding-bottom: 0.313em;
+  text-transform: uppercase;
+}
+html {
+  font-size: calc(100% + 0.5vw);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.001s !important;
+  }
 }
 .explication {
   margin: 1em;
@@ -41,24 +73,13 @@ h2 {
   --background-size: unquote("min(100vw, 40em)");
 }
 
-html {
-  font-size: calc(100% + 0.5vw);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition-duration: 0.001s !important;
-  }
-}
-
 .container {
-  background: linear-gradient(100deg, #402, #006);
+  background: linear-gradient(100deg, $darkPurple, $midnightBlue);
   padding: 2em;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: $white;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 55'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='7' opacity='.1'%3E%3Cpath d='M-345 34.5s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 48.3 0 48.3s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 20.7s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 34.5 0 34.5s115-13.8 115-13.8S172.5 6.9 230 6.9s115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8m-920 27.6s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 62.1 0 62.1s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 6.9s57.5-13.8 115-13.8S-115 6.9-115 6.9-57.5 20.7 0 20.7 115 6.9 115 6.9 172.5-6.9 230-6.9 345 6.9 345 6.9s57.5 13.8 115 13.8S575 6.9 575 6.9'/%3E%3Cpath d='M-345-6.9s57.5-13.8 115-13.8S-115-6.9-115-6.9-57.5 6.9 0 6.9 115-6.9 115-6.9s57.5-13.8 115-13.8S345-6.9 345-6.9 402.5 6.9 460 6.9 575-6.9 575-6.9m-920 69s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 75.9 0 75.9s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3C/g%3E%3C/svg%3E%0A"),
-    linear-gradient(80deg, #202, #006);
+    linear-gradient(80deg, $deepPlum, $midnightBlue);
   background-position: 50% 50%;
   animation: background-move 10s linear infinite;
   background-size: 100vw auto, 100% 100%;
@@ -92,7 +113,7 @@ html {
       position: absolute;
       left: 3em;
       top: -0.28em;
-      background: #000;
+      background: $black;
     }
   }
 
@@ -102,12 +123,12 @@ html {
     text-transform: uppercase;
     font-size: 0.6em;
     letter-spacing: 0.1em;
-    color: #fff;
+    color: $white;
     cursor: pointer;
   }
 
   &__input {
-    color: #ffffff;
+    color: $white;
     text-align: center;
     font-size: 1.25rem;
     line-height: 1;
@@ -117,8 +138,8 @@ html {
     width: 100%;
     padding: 0.8em 1em;
     border: 0.25em solid transparent;
-    background-image: linear-gradient(#000, #000),
-      linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    background-image: linear-gradient($black, $black),
+      linear-gradient(-45deg, #{$amber}, #{$deepPurple}, #{$cyanSky});
     background-origin: border-box;
     background-clip: padding-box, border-box;
     border-radius: 1.8em;
@@ -130,14 +151,14 @@ html {
     }
 
     &:focus {
-      outline: 2px dashed #ad2b89;
+      outline: 0.125em dashed #ad2b89;
       outline-offset: 0.5em;
     }
   }
 }
 
 .input-group__input::placeholder {
-  color: #fff;
+  color: $white;
   font-size: 0.6rem;
   text-align: center;
 }
@@ -148,12 +169,17 @@ html {
 
 .btn {
   margin: 1.2rem;
-  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-color: linear-gradient(
+    -45deg,
+    #{$amber},
+    #{$deepPurple},
+    #{$cyanSky}
+  );
   --border-width: 0.125em;
   --curve-size: 0.5em;
-  --blur: 30px;
+  --blur: 1.875em;
   --bg: #080312;
-  --color: #afffff;
+  --color: $bluePastel;
   color: var(--color);
   /* use position: relative; so that BG is only for .btn */
   position: relative;
@@ -161,10 +187,10 @@ html {
   display: flex;
   place-content: center;
   padding: 0.5em 1.5em;
-  font-size: 17px;
+  font-size: 1.063em;
   border: 0;
   text-transform: uppercase;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0.625em 0.625em 1.25em $blackWithOpacity;
   clip-path: polygon(
     /* Top-left */ 0% var(--curve-size),
     var(--curve-size) 0,
@@ -242,7 +268,7 @@ html {
 }
 
 .btn:where(:hover, :focus) {
-  color: #fff;
+  color: $white;
 }
 
 .wrong-attempts {
@@ -274,24 +300,8 @@ html {
 
 .column p {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0.313em;
   text-decoration: underline;
-}
-
-$white: #fcfcfc;
-$gray: #cbcdd3;
-$dark: #777777;
-$success: #a1a0e6;
-$secondary: #7a52a5;
-
-h3 {
-  font-size: 0.9em;
-  font-weight: 100;
-  letter-spacing: 3px;
-  padding-top: 5px;
-  color: $white;
-  padding-bottom: 5px;
-  text-transform: uppercase;
 }
 
 .btn-restart {
@@ -300,7 +310,7 @@ h3 {
 
 .alert {
   font-weight: 100;
-  letter-spacing: 5px;
+  letter-spacing: 0.3em;
   margin-bottom: 0.5em;
 }
 
@@ -313,8 +323,8 @@ h3 {
   width: 23%;
   height: 45%;
   background: linear-gradient(to bottom right, $success 40%, $secondary 100%);
-  border-radius: 20px;
-  perspective: 40px;
+  border-radius: 1.3em;
+  perspective: 3em;
   z-index: 9999;
 }
 
@@ -324,7 +334,7 @@ h3 {
   height: 22%;
   background: $white;
   border-radius: 50%;
-  border: 1px solid $dark;
+  border: 0.06em solid $dark;
   top: 21%;
   left: 39%;
   z-index: 2;
@@ -332,8 +342,8 @@ h3 {
 }
 .eye {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 0.3em;
+  height: 0.3em;
   background: $dark;
   border-radius: 50%;
   top: 40%;
@@ -348,13 +358,13 @@ h3 {
   position: absolute;
   top: 43%;
   left: 45%;
-  width: 7px;
-  height: 7px;
+  width: 0.438em;
+  height: 0.438em;
   border-radius: 50%;
 }
 
 .happy {
-  border: 2px solid;
+  border: 0.13em solid;
   border-color: transparent $dark $dark transparent;
   transform: rotate(45deg);
 }
@@ -391,7 +401,7 @@ h3 {
   background: $white;
   width: 50%;
   height: 15%;
-  border-radius: 50px;
+  border-radius: 3em;
   top: 78%;
   left: 25%;
   outline: 0;
@@ -406,7 +416,7 @@ h3 {
 
 @keyframes bounce {
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-0.6em);
   }
 }
 

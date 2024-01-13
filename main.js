@@ -46,9 +46,9 @@ function initializeGame() {
       }
     }
 
-    messageDisplay.innerText = `The number entered is too <span class="highlight">${
+    messageDisplay.innerText = `The number entered is too ${
       userGuess < randomNumber ? "small" : "big"
-    }</span> !`;
+    }!`;
     numberInput.value = "";
   }
 
@@ -96,7 +96,7 @@ function initializeGame() {
   });
   function displayVictoryMessage() {
     const messageVictory = document.getElementById("messageVictory");
-    messageVictory.HTML = `You found the number in ${attemptsCounter} tr${
+    messageVictory.innerText = `You found the number in ${attemptsCounter} tr${
       attemptsCounter <= 1 ? "y" : "ies"
     }!`;
     popup.style.display = "block";
