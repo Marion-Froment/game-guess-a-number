@@ -17,19 +17,20 @@ $black: #000000;
   box-sizing: border-box;
 }
 body {
-  font-family: Arial, sans-serif;
   color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Bungee", sans-serif;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 800;
   text-align: center;
   color: $white;
+  font-family: "Press Start 2P", cursive;
 }
 
 h2 {
@@ -44,6 +45,10 @@ h3 {
   color: $white;
   padding-bottom: 0.313em;
   text-transform: uppercase;
+}
+.btn {
+  font-size: 0.9em;
+  padding: 0.6em 1em;
 }
 html {
   font-size: calc(100% + 0.5vw);
@@ -62,11 +67,12 @@ html {
     font-size: 2.5em;
   }
   .explication {
+    margin: 1.5em;
     font-size: 0.8em;
   }
   .btn {
-    font-size: 0.9em !important;
-    padding: 0.6em 1em !important;
+    font-size: 0.9em;
+    padding: 0.6em 1em;
   }
   .input-group {
     &__label {
@@ -94,11 +100,12 @@ html {
     font-size: 1em;
   }
   .explication {
-    font-size: 0.8em;
+    margin: 2em;
+    font-size: 0.5em;
   }
   .btn {
-    font-size: 0.8em !important;
-    padding: 0.5em 1em !important;
+    font-size: 0.8em;
+    padding: 0.5em 1em;
   }
   .attempt {
     font-size: 0.9em;
@@ -112,10 +119,15 @@ html {
 
     &__input {
       font-size: 1em !important;
+
+      &::-moz-placeholder {
+        font-size: 0.4em !important;
+      }
+
+      &::placeholder {
+        font-size: 0.4em !important;
+      }
     }
-  }
-  .input-group__input::placeholder {
-    font-size: 0.4em !important;
   }
   #success-box {
     width: 90% !important;
@@ -124,7 +136,8 @@ html {
 }
 
 .explication {
-  margin: 1em;
+  margin: 2.5em;
+  font-size: 0.8em;
 }
 
 .game {
@@ -151,7 +164,7 @@ html {
   background-position: 50% 50%;
   animation: background-move 10s linear infinite;
   background-size: 100vw auto, 100% 100%;
-  background-size: unquote("max(100vw, 30em)") auto, 100% 100%;
+  background-size: max(100vw, 30em) auto, 100% 100%;
 }
 
 @keyframes background-move {
@@ -160,7 +173,7 @@ html {
   }
   100% {
     background-position: 100vw 0, 0 0;
-    background-position: unquote("max(100vw, 40em)") 0, 0 0;
+    background-position: max(100vw, 40em) 0, 0 0;
   }
 }
 
@@ -359,6 +372,17 @@ html {
 
 .columns {
   display: flex;
+  background-color: $midnightBlue;
+  padding: 1em;
+  border-radius: 2em;
+  border: 0.25em solid transparent;
+  background-image: linear-gradient($midnightBlue, $midnightBlue),
+    linear-gradient(-45deg, #{$amber}, #{$deepPurple}, #{$cyanSky});
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 1.8em;
+  background-size: 200% 100%;
+  transition: background-position 0.8s ease-out;
 }
 
 .column {
@@ -373,13 +397,13 @@ html {
 }
 
 .btn-restart {
-  color: darken($secondary, 20%);
+  color: $secondary;
 }
 
 .alert {
-  font-weight: 100;
   letter-spacing: 0.3em;
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 #success-box {
@@ -465,6 +489,7 @@ html {
 }
 
 .button-box {
+  margin-top: 0.5em;
   position: absolute;
   background: $white;
   width: 50%;
@@ -476,7 +501,7 @@ html {
   border: none;
   transition: all 0.5s ease-in-out;
   &:hover {
-    background: darken($white, 5%);
+    background: $white;
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
   }
@@ -496,6 +521,7 @@ html {
 
 #messageVictory {
   margin: 1em;
+  font-size: 0.8em;
 }
 
 #gameElements {
