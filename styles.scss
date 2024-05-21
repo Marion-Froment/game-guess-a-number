@@ -46,6 +46,12 @@ h3 {
   padding-bottom: 0.313em;
   text-transform: uppercase;
 }
+
+#initialElements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .btn {
   font-size: 0.9em;
   padding: 0.6em 1em;
@@ -264,9 +270,7 @@ html {
   color: var(--color);
   /* use position: relative; so that BG is only for .btn */
   position: relative;
-  isolation: isolate;
   display: flex;
-  place-content: center;
   padding: 0.5em 1.5em;
   font-size: 1.063em;
   border: 0;
@@ -393,7 +397,6 @@ html {
 .column p {
   font-weight: bold;
   margin-bottom: 0.8em;
-  text-decoration: underline;
 }
 
 .btn-restart {
